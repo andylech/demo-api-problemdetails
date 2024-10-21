@@ -1,0 +1,6 @@
+@ProblemDetailsApiDemo.Futurama.Apis.Authentication_HostAddress = http://localhost:5062
+
+GET {{ProblemDetailsApiDemo.Futurama.Apis.Authentication_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
