@@ -1,4 +1,4 @@
-﻿namespace ProblemDetailsApiDemo.Futurama.Models.Structs;
+﻿namespace ProblemDetailsApiDemo.Futurama.Shared.Models.Source.Structs;
 
 public struct CorrectAnswer
 {

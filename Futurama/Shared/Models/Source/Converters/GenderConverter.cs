@@ -1,8 +1,8 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
-using ProblemDetailsApiDemo.Futurama.Models.Enums;
+using ProblemDetailsApiDemo.Futurama.Shared.Models.Source.Enums;
 
-namespace ProblemDetailsApiDemo.Futurama.Models.Converters;
+namespace ProblemDetailsApiDemo.Futurama.Shared.Models.Source.Converters;
 
 public class GenderConverter : JsonConverter<Gender>
 {

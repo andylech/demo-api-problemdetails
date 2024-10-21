@@ -2,12 +2,12 @@
 
 #nullable enable
 
-using ProblemDetailsApiDemo.Futurama.Models.Enums;
-using ProblemDetailsApiDemo.Futurama.Models.Serialization;
+using ProblemDetailsApiDemo.Futurama.Shared.Models.Source.Enums;
+using ProblemDetailsApiDemo.Futurama.Shared.Models.Source.Serialization;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace ProblemDetailsApiDemo.Futurama.Models.Entities;
+namespace ProblemDetailsApiDemo.Futurama.Shared.Models.Source.Entities;
 
 public class Character
 {
@@ -53,6 +53,20 @@ public class Name
 
     [JsonPropertyName("last")]
     public required string Last { get; set; }
+
+    // HACK
+    public string FullName => GetFullName(First, Middle, Last);
+
+    // HACK
+    private static string GetFullName(string first, string middle, string last)
+    {
+        var fullName =
+            string.Join(" ",
+                new string[] { first.Trim(), middle.Trim(), last.Trim() }
+                    .Where(str => !string.IsNullOrEmpty(str)));
+
+        return fullName;
+    }
 }
 
 public class Images

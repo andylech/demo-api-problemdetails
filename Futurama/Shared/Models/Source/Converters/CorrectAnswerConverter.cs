@@ -1,8 +1,8 @@
-﻿using ProblemDetailsApiDemo.Futurama.Models.Structs;
+﻿using ProblemDetailsApiDemo.Futurama.Shared.Models.Source.Structs;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace ProblemDetailsApiDemo.Futurama.Models.Converters;
+namespace ProblemDetailsApiDemo.Futurama.Shared.Models.Source.Converters;
 
 public class CorrectAnswerConverter : JsonConverter<CorrectAnswer>
 {

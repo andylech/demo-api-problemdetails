@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
-using ProblemDetailsApiDemo.Futurama.Models.Converters;
+using ProblemDetailsApiDemo.Futurama.Shared.Models.Source.Converters;
 
-namespace ProblemDetailsApiDemo.Futurama.Models.Serialization;
+namespace ProblemDetailsApiDemo.Futurama.Shared.Models.Source.Serialization;
 
 public static class Converter
 {

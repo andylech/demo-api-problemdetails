@@ -2,11 +2,11 @@
 
 #nullable enable
 
-using ProblemDetailsApiDemo.Futurama.Models.Serialization;
+using ProblemDetailsApiDemo.Futurama.Shared.Models.Source.Serialization;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace ProblemDetailsApiDemo.Futurama.Models.Entities;
+namespace ProblemDetailsApiDemo.Futurama.Shared.Models.Source.Entities;
 
 public class EpisodeInfo
 {
