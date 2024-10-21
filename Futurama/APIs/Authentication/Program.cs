@@ -1,9 +1,10 @@
-
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Models;
 using ProblemDetailsApiDemo.Futurama.Apis.Authentication.Handlers;
 using ProblemDetailsApiDemo.Futurama.Apis.Authentication.Models;
 using ProblemDetailsApiDemo.Futurama.Shared.Models.Requests.Authentication;
+using ProblemDetailsApiDemo.Futurama.Shared.Models.Source.Entities;
+using static Microsoft.AspNetCore.Http.StatusCodes;
 
 #pragma warning disable CA2254
 
@@ -72,6 +73,11 @@ app.MapGet("api/users",
 
             return usersResult;
         })
+    .Produces(Status200OK, responseType: typeof(IEnumerable<Character>))
+    .Produces(Status404NotFound,
+        contentType: "application/problem+json")
+    .Produces(Status500InternalServerError,
+        contentType: "application/problem+json")
     .WithTags("Users");
 
 app.MapGet("api/users/{userId}",
@@ -81,6 +87,11 @@ app.MapGet("api/users/{userId}",
 
         return usersResult;
     })
+    .Produces(Status200OK, responseType: typeof(Character))
+    .Produces(Status404NotFound,
+        contentType: "application/problem+json")
+    .Produces(Status500InternalServerError,
+        contentType: "application/problem+json")
     .WithTags("Users");
 
 app.MapPost("api/users/search",
@@ -92,6 +103,11 @@ app.MapPost("api/users/search",
 
         return usersResult;
     })
+    .Produces(Status200OK, responseType: typeof(Character))
+    .Produces(Status404NotFound,
+        contentType: "application/problem+json")
+    .Produces(Status500InternalServerError,
+        contentType: "application/problem+json")
     .WithTags("Users");
 
 #endregion
