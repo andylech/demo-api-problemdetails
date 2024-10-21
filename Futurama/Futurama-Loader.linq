@@ -1,38 +1,29 @@
 <Query Kind="Program">
-  <Reference Relative="Models\bin\Debug\net8.0\ProblemDetailsApiDemo.Futurama.Models.dll">D:\Sync\Code\GitHub\andylech\demo-api-problemdetails-talk\Futurama\Models\bin\Debug\net8.0\ProblemDetailsApiDemo.Futurama.Models.dll</Reference>
+  <Reference Relative="Shared\bin\Debug\net8.0\ProblemDetailsApiDemo.Futurama.Shared.dll">D:\Sync\Code\GitHub\andylech\demo-api-problemdetails-talk\Futurama\Shared\bin\Debug\net8.0\ProblemDetailsApiDemo.Futurama.Shared.dll</Reference>
 </Query>
 
-using ProblemDetailsApiDemo.Futurama.Models;
-using ProblemDetailsApiDemo.Futurama.Models.Entities;
+using ProblemDetailsApiDemo.Futurama.Shared.Models;
+using ProblemDetailsApiDemo.Futurama.Shared.Models.Source.Entities;
 using System.Text.Json;
+
+using static ProblemDetailsApiDemo.Futurama.Shared.DataPaths;
 
 void Main()
 {
 	try
 	{
-		var dataPath = @"D:\Sync\Code\GitHub\andylech\demo-api-problemdetails-talk\Futurama\Data";
-		
-		if (!Path.Exists(dataPath))
-		{
-			Debug.WriteLine("ERROR: Invalid local folder path '{dataPath}'");
-			
-			return;
-		}		
-		
-		var dataFilenames = new string[] {
-			"cast.json", 
-			"characters.json", 
-			"episodes.json", 
-			"info.json", 
-			"inventory.json", 
-			"questions.json",
+		var dataFilePaths = new string[] {
+			CastPath,
+			CharactersPath,
+			EpisodesPath,
+			InfoPath,
+			InventoryPath,
+			QuestionsPath,
 		};
-		//dataFiles.Dump();
+		dataFilePaths.Dump();
 
-		foreach (var dataFilename in dataFilenames)
+		foreach (var dataFilePath in dataFilePaths)
 		{
-			var dataFilePath = Path.Combine(dataPath, dataFilename);
-			
 			if (!Path.Exists(dataFilePath))
 			{
 				Debug.WriteLine("ERROR: Invalid local file path '{dataFile}'");
@@ -44,6 +35,8 @@ void Main()
 			
 			var jsonString = File.ReadAllText(dataFilePath);
 			//jsonString.Dump();
+			
+			var dataFilename = Path.GetFileName(dataFilePath);
 			
 			switch (dataFilename)
 			{
