@@ -21,9 +21,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{F201A6D6-7
 		D_5_4Sync_4Code_4GitHub_4andylech_4demo-api-problemdetails-talk_4Futurama_4Data_4info_1json__JsonSchema = 
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProblemDetailsApiDemo.Futurama.Models", "Futurama\Models\ProblemDetailsApiDemo.Futurama.Models.csproj", "{0A9A424D-CDC3-4250-9A9B-B98B77A72E73}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{275BAB15-4ED1-434C-9A4A-5BF8797FBD87}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{275BAB15-4ED1-434C-9A4A-5BF8797FBD87}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIs", "APIs", "{E89ADFB6-3921-4C11-8158-FC702D522ADF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProblemDetailsApiDemo.Futurama.Apis.Authentication", "Futurama\APIs\Authentication\ProblemDetailsApiDemo.Futurama.Apis.Authentication.csproj", "{E70A154A-CEAC-4FBB-80C5-DF94899E6632}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProblemDetailsApiDemo.Futurama.Apis.Presentation", "Futurama\APIs\Presentation\ProblemDetailsApiDemo.Futurama.Apis.Presentation.csproj", "{376CF5F3-6B20-49B8-8BDB-86EB2855D45B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProblemDetailsApiDemo.Futurama.Shared", "Futurama\Shared\ProblemDetailsApiDemo.Futurama.Shared.csproj", "{F72EFFC2-4638-436C-A969-FA07065503BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,18 +37,29 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0A9A424D-CDC3-4250-9A9B-B98B77A72E73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0A9A424D-CDC3-4250-9A9B-B98B77A72E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0A9A424D-CDC3-4250-9A9B-B98B77A72E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0A9A424D-CDC3-4250-9A9B-B98B77A72E73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E70A154A-CEAC-4FBB-80C5-DF94899E6632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E70A154A-CEAC-4FBB-80C5-DF94899E6632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E70A154A-CEAC-4FBB-80C5-DF94899E6632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E70A154A-CEAC-4FBB-80C5-DF94899E6632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{376CF5F3-6B20-49B8-8BDB-86EB2855D45B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{376CF5F3-6B20-49B8-8BDB-86EB2855D45B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{376CF5F3-6B20-49B8-8BDB-86EB2855D45B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{376CF5F3-6B20-49B8-8BDB-86EB2855D45B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F72EFFC2-4638-436C-A969-FA07065503BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F72EFFC2-4638-436C-A969-FA07065503BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F72EFFC2-4638-436C-A969-FA07065503BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F72EFFC2-4638-436C-A969-FA07065503BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F201A6D6-7D12-43A3-9739-403499724D71} = {516465DC-D39A-45E8-BAF6-CCE48D811917}
-		{0A9A424D-CDC3-4250-9A9B-B98B77A72E73} = {275BAB15-4ED1-434C-9A4A-5BF8797FBD87}
 		{275BAB15-4ED1-434C-9A4A-5BF8797FBD87} = {516465DC-D39A-45E8-BAF6-CCE48D811917}
+		{E89ADFB6-3921-4C11-8158-FC702D522ADF} = {516465DC-D39A-45E8-BAF6-CCE48D811917}
+		{E70A154A-CEAC-4FBB-80C5-DF94899E6632} = {E89ADFB6-3921-4C11-8158-FC702D522ADF}
+		{376CF5F3-6B20-49B8-8BDB-86EB2855D45B} = {E89ADFB6-3921-4C11-8158-FC702D522ADF}
+		{F72EFFC2-4638-436C-A969-FA07065503BC} = {275BAB15-4ED1-434C-9A4A-5BF8797FBD87}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AA2EBC92-D52C-4C32-817D-6435D8FFED3F}
